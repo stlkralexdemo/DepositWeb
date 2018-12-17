@@ -24,7 +24,7 @@ public class DepositController {
     @PostMapping
     public String index(Model model, @RequestParam int deposit,@RequestParam int percent,@RequestParam int date) {
         model.addAttribute("welcome", "Hello");
-        model.addAttribute("summa", service.calculateDeposit(deposit, percent, date));
+        model.addAttribute("total", service.calculateDeposit(deposit, percent, date));
         return "index";
     }
 }
