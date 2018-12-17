@@ -17,13 +17,13 @@ public class DepositController {
 
     @GetMapping
     public String index(Model model) {
-        model.addAttribute("welcome", "Hello");
+        model.addAttribute("welcome", "Посчитайте свою прибыль");
         return "index";
     }
 
     @PostMapping
     public String index(Model model, @RequestParam int deposit,@RequestParam int percent,@RequestParam int date) {
-        model.addAttribute("welcome", "Hello");
+        model.addAttribute("welcome", "Посчитайте свою прибыль");
         model.addAttribute("total", service.calculateDeposit(deposit, percent, date));
         return "index";
     }
